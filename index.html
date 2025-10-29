@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Healthcare script">
+    <meta name="author" content="Nyerhovwo.t">
+    <meta name="generator" content="">
+    <title>Health4Life</title>
+
+    <!--favicons-->
+    <link rel="icon" href="./assets/vendors/favicon/android-chrome-512x512.png">
+
+    <!--vendors-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="./assets/vendors/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./assets/vendors/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!--main-->
+    <link rel="stylesheet" href="./assets/css/h4l.css">
+
+</head>
+<body class="display user-select-none"> 
+    <main class="desktop">
+
+        <div class="webmed_bg">
+        <div class="hstack loade">   
+        <p class="pulse-text">
+        <img src="./assets/img/logo/2-removebg-preview.png" alt=""></p>
+        <!--<div class="morph-loader"></div>-->
+        </div>
+        </div>
+
+        <a class="aichat btn" type="button" data-bs-toggle="modal" data-bs-target="#aiModal" href=""><i class="bi bi-chat"></i></a>
+        <!-- Modal -->
+        <div class="modal fade" id="aiModal" tabindex="-1" aria-labelledby="aiModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                <!--<div class="modal-header">
+                    <h1 class="modal-title fs-5" id="aiModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>-->
+                <div class="modal-body">
+                    <div class="py-5 p-5"> 
+                        <h1 class="text-center">AI chat here? Allegedly</h1>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Hey</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!--
+        navbar -->
+        <div class="navbar fixed-top">
+            <div class="logo" style="height: 12px; width: 140px;">
+            <a href="" class="log"><img src="./assets/img/logo/2-removebg-preview.png" class="img-fluid"  alt=""></a>  
+            </div>
+
+            <ul class="nav-item">
+            <li><a href="" class="active">Diagnosis</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Contacts</a></li>
+            </ul>
+
+            <div class="users">
+            <a href="profile.html" class="user"><i class="bi bi-person-fill"></i>Profile</a>
+            <a href="" class="btn" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Register/Login</a>
+            </div>
+        </div>
+        <!--
+        modal-->
+            <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" style="background: rgba(0, 0, 0, 0.349);">
+                <!--<div class="modal-header text-center">
+                    <h1 class="modal-title" id="exampleModalToggleLabel"></h1>
+                </div>-->
+                <div class="modal-body text-center py-5 text-light">
+                    <h1 class="modal-title fs-3 fw-bolder mb-4" id="exampleModalToggleLabel">Register</h1>
+                    <form action="" method="" class="mb-5">
+                        <input type="text" placeholder="Full Name" class="mb-3 p-2 rounded-2 w-75 border border-secondary"><br>
+                        <input type="email" placeholder="Email Address" class="mb-3 p-2 rounded-2 w-75 border border-secondary"><br>
+                        <input type="password" placeholder="Password" class="mb-3 p-2 rounded-2 w-75 border border-secondary"><br>
+                        <input type="password" placeholder="Confirm Password" class="mb-3 p-2 rounded-2 w-75 border border-secondary"><br>
+                        <button type="submit" class="btn btn-danger w-75 mb-3">Register</button>
+                    </form>
+                    if you already have an account, <a class="text-decoration-none text-danger" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" href="">login here</a>
+                </div>
+                <!--<div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button>
+                </div>-->
+                </div>
+            </div>
+            </div>
+            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" style="background: rgba(0, 0, 0, 0.349);">
+                <!--<div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>-->
+                <div class="modal-body">
+                    <div class="text-center py-5 text-light">
+                        <h1 class="modal-title fs-3 fw-bolder mb-4" id="exampleModalToggleLabel2">Login</h1>
+                        <form action="" method="" class="mb-5">
+                            <input type="email" placeholder="Email Address" class="mb-3 p-2 rounded-2 w-75 border border-secondary"><br>
+                            <input type="password" placeholder="Password" class="mb-3 p-2 rounded-2 w-75 border border-secondary"><br>
+                            <button type="submit" class="btn btn-danger w-75 mb-3">Login</button>
+                        </form>
+                        don't have an account, <a class="text-decoration-none text-danger" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" href="">register here</a>
+                    </div>
+                </div>
+                <!--<div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+                </div>-->
+                </div>
+            </div>
+            </div>
+
+        <!-- header -->
+        <div class="header">
+            <div class="main">
+            <p class="first">Quick And Easy Medical Solutions At Your Door Step</p> <br>
+            <p class="next">be the the first in line to experience the a whole new world to tackling health issues hand in hand with ai suggetions</p>
+            <div class="button">
+                <a href="" class="btn fst">Get started</a>
+                <a href="" class="btn snd">Check If You're Eligible</a>
+            </div>
+            </div>
+
+            <div class="no">
+                <p><i class="bi bi-check-circle text-light"></i> Backed by medical personnels on standby for your convenience</p>
+                <p><i class="bi bi-check-circle text-light"></i> 90% ai accuracy rate for pinpointing ailments</p>
+                <p><i class="bi bi-check-circle text-light"></i> 24/7 uptime service around the clock</p>
+            </div>
+        </div>
+        
+        <!-- Section:Block -->  
+        <div class="container py-3 my-5 mt-5 text-center invisible">
+            block   
+        </div>
+
+        <!-- 
+        Section: Hero -->
+        <section class="h4l-hmargin">
+
+            <div class="h4l-hero">
+                <div class="hero-text-float rounded-2">
+                    <div class="hero-text-float-img">
+                        <img src="./assets/img/hero/Some anatomy.jpg" alt="">
+                    </div>
+                    <i class="bi bi-three-dots hero-up"></i>
+                    <i class="bi bi-arrow-up-right hero-down"></i>
+                    <h6 class="hero-text-down"><a href="../Alfredo's/alfredo's.html">Discover our recent project</a></h6>
+                </div>
+
+                <div class="hero-text text-light">
+                    <h5>Your Health, Our Priority</h5>
+                    <h1 class="display-2 fw-bolder">the future of healthcare is now knocking</h1>
+                    <div>
+                        <button>Get in touch <i class="bi bi-arrow-up-right"></i></button>
+                        <button>Our services <i class="bi bi-arrow-up-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="hero-text2 row">   
+                    <div class="hero-text2-item col-lg-4">
+                        <h1>50+</h1>
+                        compounded solutions on the go fro your convenience
+                    </div>
+                    <div class="hero-text2-item col-lg-4">
+                        <h1>90%</h1>
+                        ai accuracy rate for pinpointing ailments
+                    </div>
+                    <div class="hero-text2-item col-lg-4">
+                        <h1>24/7</h1>
+                        available around the clock to aid your needs
+                    </div>
+                </div>
+            </div>
+
+            <div class="h4l-hero2 row d-flex justify-content-center">
+                <div class="hero-content-left col-lg-6">
+                    <div class="hero-content-left-width text-center">
+                    <strong class="focusing">Focusing on quality</strong>, we maintain customer trust
+                    </div>
+                </div>
+                <div class="hero-content-right col-lg-6">
+                    we ensure every query is handled with utmost care and strict quality checks. offering sustainable
+                    for a hearty and healthy life.
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Section:Block -->  
+        <div class="container py-3 my-5 mt-5 text-center invisible">
+            block   
+        </div>
+        
+
+        <!-- Section: Features -->
+        <div>
+            <div class="container my-5">
+                <div class="text-center">
+                <h data-aos="fade-up" data-aos-delay="300">Features</h>
+                <h1 data-aos="fade-up" data-aos-delay="400" class="fw-bolder display-4">Smart Health Solutions</h1>
+                <h6 data-aos="fade-up" data-aos-delay="500">Advanced technology for precise medical assessment</h6>
+                </div>
+                <div>
+                    <div class="row mt-5">
+                        <div data-aos="fade-up" data-aos-delay="700" class="col-lg-4 mb-4">
+                            <div class="p-4 wm-feature-block wm-feature rounded-2 shadow">
+                                <p data-aos="fade-left" data-aos-delay="800">Quick</p>
+                                <h1 data-aos="fade-left" data-aos-delay="800">Fast symptom identification</h1>
+                                <p data-aos="fade-left" data-aos-delay="800">Input symptoms and receive immediate potential diagnosis</p>
+                                <a data-aos="fade-left" data-aos-delay="800" href="#process" class="btn w-100 text-start">Explore <i class="bi bi-chevron-double-right float-end"></i><span class="right"></span></a>
+                                <img data-aos="zoom-in" data-aos-delay="800" class="imgcon" loading="lazy" src="./assets/img/features/feature-1.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="800" class="col-lg-4 mb-4">
+                            <div class="p-4 wm-feature-block wm-feature rounded-2 shadow">
+                                <p data-aos="fade-left" data-aos-delay="900">Expert</p>
+                                <h1 data-aos="fade-left" data-aos-delay="900">Professional medical guidance</h1>
+                                <p data-aos="fade-left" data-aos-delay="900">Verified medical professionals review your potential conditions</p>
+                                <a data-aos="fade-left" data-aos-delay="900" href="#process" class="btn w-100 text-start">Learn <i class="bi bi-chevron-double-right float-end"></i><span class="right"></span></a>
+                                <img data-aos="zoom-in" data-aos-delay="900" class="imgcon" loading="lazy" src="./assets/img/features/features-2-1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="900" class="col-lg-4 mb-4">
+                            <div class="p-4 wm-feature-block wm-feature rounded-2 shadow">
+                                <p data-aos="fade-left" data-aos-delay="1000">Secure</p>
+                                <h1 data-aos="fade-left" data-aos-delay="1000">Confidential Health info protection</h1>
+                                <p data-aos="fade-left" data-aos-delay="1000">Your personal data remains private and encrypted in our database</p>
+                                <a data-aos="fade-left" data-aos-delay="1000" href="#process" class="btn w-100 text-start">Discover <i class="bi bi-chevron-double-right float-end"></i><span class="right"></span></a>
+                                <img data-aos="zoom-in" data-aos-delay="1000" class="imgcon" loading="lazy" src="./assets/img/features/feature-3.jpeg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section:Block -->  
+        <div class="container py-3 my-5 mt-5 text-center invisible">
+            block   
+        </div>
+
+        <!-- Section: Process -->
+        <div class="container webmed-process">
+            <div>
+                <p data-aos="fade-up" data-aos-delay="300">Process</p>
+                <h1 data-aos="fade-left" data-aos-delay="400" class="fw-bolder display-4">Whats New In House?</h1>
+                <p data-aos="fade-left" data-aos-delay="500">Simple and intuitive platform designed for easy medical assessment.</p>
+            </div>
+            <div class="container px-5 py-5 webmed-process-hero rounded-2">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-lg-5 order-lg-1 webmed-process-hero-info">
+                        <div class="">
+                            <h1 data-aos="fade-left" data-aos-delay="500" class="heading float-left fw-bolder mb-3">Revolutionizing Healthcare: Meet Your AI Hospital Assistant 🤖❤️</h1>
+
+                            <p data-aos="fade-left" data-aos-delay="700" class="text-dark">Welcome to the Future of Healthcare Navigation In a world where healthcare complexity often feels overwhelming, we're excited to introduce a groundbreaking solution that 
+                                puts clarity, convenience, and compassion at your fingertips. Meet your new AI Hospital Assistant – your personal guide through the healthcare journey, available 24/7 to transform how you 
+                                interact with medical care..
+                            </p>
+                            <p data-aos="fade-left" data-aos-delay="900">
+                                Ever Found Yourself Asking... <br>
+                                "Which specialist do I need for this symptom?" <br>
+                                "How do I prepare for my upcoming procedure?" <br>
+                                "What are my insurance options for this treatment?" <br>
+                                "Where do I even begin with my health concerns?" <br>
+                                If these questions sound familiar, you're not alone. The healthcare system can be confusing, intimidating, and time-consuming. That's exactly why we created our AI Hospital Assistant – 
+                                to bridge the gap between medical expertise and patient understanding.
+                            </p>
+                            <p data-aos="fade-left" data-aos-delay="1100">
+                                What Exactly Is Our AI Hospital Assistant?
+                                Think of me as your knowledgeable healthcare companion, available whenever you need guidance. I'm not here to replace your doctors, but to enhance your healthcare experience by:
+                                Your Digital Healthcare Navigator
+                                I help you navigate our hospital's services, understand medical terminology, prepare for appointments, and connect you with the right resources – all in plain, understandable language.
+                            </p>
+
+                            <div class="hstack process-btn gap-3">
+                            <a data-aos="fade-left" data-aos-delay="500" type="button" data-bs-toggle="modal" data-bs-target="#aiModal" class="my-4 btn float-end" data-aos="fade-up" data-aos-delay="300">Try Now</a>
+                            <!-- Modal -->
+                                <div class="modal fade" id="aiModal" tabindex="-1" aria-labelledby="aiModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-xl">
+                                        <div class="modal-content">
+                                        <!--<div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="aiModalLabel">Modal title</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>-->
+                                        <div class="modal-body">
+                                            <div class="py-5 p-5"> 
+                                                <h1 class="text-center">AI chat here? Allegedly</h1>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Hey</button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <a data-aos="fade-left" data-aos-delay="500" type="button" class="my-4 btn float-end" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-aos="fade-up" data-aos-delay="300">Learn More</a>
+                            </div>
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                    <!--<div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>-->
+                                    <div class="modal-body">
+                                        <div class="container px-5 py-5 webmed-process-hero rounded-2">
+                                            <div class="row align-items-center justify-content-between">
+                                                <div class="col-lg-12 webmed-process-hero-info">
+                                                    <div class="">
+                                                        <h1 class="heading float-left mb-3" data-aos="fade-up" data-aos-delay="100">Revolutionizing Healthcare: Meet Your AI Hospital Assistant 🤖❤️</h1>
+
+                                                        <p class="text-dark">Welcome to the Future of Healthcare Navigation In a world where healthcare complexity often feels overwhelming, we're excited to introduce a groundbreaking solution that 
+                                                            puts clarity, convenience, and compassion at your fingertips. Meet your new AI Hospital Assistant – your personal guide through the healthcare journey, available 24/7 to transform how you 
+                                                            interact with medical care..
+                                                        </p>
+                                                        <p>
+                                                            Ever Found Yourself Asking... <br>
+                                                            "Which specialist do I need for this symptom?" <br>
+                                                            "How do I prepare for my upcoming procedure?" <br>
+                                                            "What are my insurance options for this treatment?" <br>
+                                                            "Where do I even begin with my health concerns?" <br>
+                                                            If these questions sound familiar, you're not alone. The healthcare system can be confusing, intimidating, and time-consuming. That's exactly why we created our AI Hospital Assistant – 
+                                                            to bridge the gap between medical expertise and patient understanding.
+                                                        </p>
+                                                        <p>
+                                                            What Exactly Is Our AI Hospital Assistant?
+                                                            Think of me as your knowledgeable healthcare companion, available whenever you need guidance. I'm not here to replace your doctors, but to enhance your healthcare experience by:
+                                                            Your Digital Healthcare Navigator
+                                                            I help you navigate our hospital's services, understand medical terminology, prepare for appointments, and connect you with the right resources – all in plain, understandable language.
+                                                        </p>
+                                                        <p>
+                                                            Always Available Support
+                                                            Whether it's 2 PM or 2 AM, whether you're at home or on the go, I'm here to answer your questions about our services, help with administrative tasks, and 
+                                                            provide general health information when you need it most.
+                                                        </p>
+                                                        <p>
+                                                            Here's How I Can Make Your Healthcare Journey Smoother:
+                                                            Before Your Visit
+                                                            1.Smart Service Matching: Tell me about your symptoms or needs, and I'll help direct you to the appropriate specialist or service <br>
+                                                            2.Appointment Preparation: Get personalized checklists for your upcoming visits or procedures <br>
+                                                            3.Insurance Guidance: Understand coverage options and billing processes <br>
+                                                            4.Location Assistance: Find the right department and parking information <br>
+                                                        </p>
+                                                        <p>
+                                                            During Your Care
+                                                            ৹ Medical Terminology Translator: Confused by medical jargon? I'll explain it in everyday language <br>
+                                                            ৹ Process Explainer: Understand what to expect during tests, treatments, or hospital stays <br>
+                                                            ৹ Resource Connector: Quickly access patient education materials and support services <br>
+
+                                                            After Your Appointment
+                                                            ৹ Treatment Plan Clarifier: Review and understand your doctor's instructions <br>
+                                                            ৹ Medication Helper: Get information about your prescriptions and potential interactions <br>
+                                                            ৹ Follow-up Scheduler: Never miss important follow-up appointments <br>
+                                                            ৹ Recovery Support: Access post-procedure care instructions and warning signs to watch for
+                                                        </p>
+                                                        <p>
+                                                            Beyond Basic Q&A – A Truly Intelligent Companion
+                                                            Our AI assistant goes beyond simple chatbot responses. I'm built with: <br>
+                                                            Medical Expertise Integration
+                                                            Trained on reliable medical information and integrated with our hospital's specific protocols and services to provide accurate, relevant guidance. <br>
+                                                            Contextual Understanding
+                                                            I remember our conversation history and can provide personalized responses based on your specific situation and previous interactions. <br>
+                                                            Multi-language Support
+                                                            Breaking down language barriers to ensure every patient receives clear, understandable information in their preferred language.
+                                                        </p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div data-aos="zoom-in" data-aos-delay="500" class="col-lg-7 order-lg-2 mb-2 mb-lg-0">
+                        <div class="mb-5 mb-lg-0">
+                                <img src="./assets/img/process/possessed-photography-YKW0JjP7rlU-unsplash.jpg" alt="Image" class="img-fluid rounded-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section:Block -->  
+        <div class="container py-3 my-5 mt-5 text-center invisible">
+            block   
+        </div>
+
+        <!--whyus-->
+        <div class="section whyus mb-5">
+            <div class="container text-center">
+                <h data-aos="fade-left" data-aos-delay="300">Benefits?</h>
+                <h1 data-aos="fade-left" data-aos-delay="400" class="display-4 fw-bolder">Why Choose Our Services</h1>
+                <h6 data-aos="fade-left" data-aos-delay="500">Comprehensive health insights tailored to your specific symptoms</h6>
+            </div>
+            <div class="container wm-whyus p-5">
+                <div class="row">
+                    <div class="col-lg-8 mb-4">
+                        <div class="p-4 wm-whyus-pod rounded-2">
+                            <img data-aos="zoom-in" data-aos-delay="500" class="imgcon2 img-fluid" loading="lazy" src="./assets/img/whyus/kelly-sikkema-UaO58q6ioxI-unsplash.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div data-aos="fade-down" data-aos-delay="500" class="p-4 wm-whyus-pod mb-2 rounded-2">
+                            <h1 data-aos="fade-down" data-aos-delay="500" class="fw-bolder">Expertise & Credentials</h1>
+                            <p data-aos="fade-down" data-aos-delay="600">Board-Certified Specialists: All our physicians are board-certified with proven expertise</p>
+                            <p data-aos="fade-down" data-aos-delay="700">Decades of Combined Experience: Our medical team brings together X years of collective experience</p>
+                            <p data-aos="fade-down" data-aos-delay="800">Top Medical School Graduates: Our doctors are graduates of renowned medical institutions</p>
+                            <p data-aos="fade-down" data-aos-delay="900">Continuous Medical Education: We stay current with the latest medical advancements and treatments</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div data-aos="fade-down" data-aos-delay="500" class="p-4 wm-whyus-pod col-lg-3 rounded-2 shadow">
+                            <img class="imgcon2" src="./assets/img/whyus/whyus-3.jpeg" alt="">
+                            <h3 class="fw-bolder">Ease Of Use</h3>
+                            <p>Designed with user-friendliness in mind, our platform allows you to quickly enter symptoms and receive insights without any hassle.</p>
+                        </div>
+
+                        <div data-aos="fade-down" data-aos-delay="500" class="p-4 wm-whyus-pod col-lg-3 rounded-2 shadow">
+                            <img class="imgcon2" src="./assets/img/whyus/whyus-3.jpeg" alt="">
+                            <h3 class="fw-bolder">Confidentiality</h3>
+                            <p>We prioritize your privacy. All interactions are secure and confidential.</p>
+                        </div> 
+
+                        <div data-aos="fade-down" data-aos-delay="500" class="p-4 wm-whyus-pod col-lg-3 rounded-2 shadow">
+                            <img class="imgcon2" src="./assets/img/whyus/whyus-3.jpeg" alt="">
+                            <h3 class="fw-bolder">AI-Powered Symptom Checker</h3>
+                            <p>In house responsive and available smart tools to help you understand your symptoms.</p>
+                        </div> 
+
+                        <div data-aos="fade-down" data-aos-delay="500" class="p-4 wm-whyus-pod col-lg-3 rounded-2 shadow">
+                            <img class="imgcon2" src="./assets/img/whyus/whyus-3.jpeg" alt="">
+                            <h3 class="fw-bolder">24/7 Access</h3>
+                            <p>Medical care when you need it, without appointment delays.</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section:Block -->  
+        <div class="container py-3 my-5 mt-5 text-center invisible">
+            block   
+        </div>
+
+
+        <!--  
+        Testimonials-->
+        <div class="container mt-5 text-center">
+                <h data-aos="fade-left" data-aos-delay="300">Testimonials</h>
+                <h1 data-aos="fade-left" class="fw-bolder display-4" data-aos-delay="400">What Our Users Say</h1>
+                <h6 data-aos="fade-left" data-aos-delay="500">Real experiences from people who found clarity with our symptom checker</h6>
+        </div>
+        <div class="section testimonials p-5">
+            <!-- testimonial carousel-->
+            <div class="owl-carousel testimonial-patient px-5 owl-theme z-3">
+                <div class="item shadow webmed-testimonial">
+                    <div class="rating">★★★★★</div>
+                    <blockquote>"The symptom checker was incredibly easy to use and provided accurate information. It helped me understand my symptoms better."</blockquote>
+                    <div class="patient-info">
+                        <div class="testimg">
+                        <img src="./assets/img/testimonial/base.jpeg" alt="Patient photo">
+                        </div>
+                        <div>
+                        <strong>Harold Emmet.</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="item shadow webmed-testimonial">
+                    <div class="rating">★★★★★</div>
+                    <blockquote>"Fast, confidential, and precise medical insights."</blockquote>
+                    <div class="patient-info">
+                        <div class="testimg">
+                        <img src="./assets/img/testimonial/maryann.jpeg" alt="Patient photo">
+                        </div>
+                        <div>
+                        <strong>Maryann Barcley.</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="item shadow webmed-testimonial">
+                    <div class="rating">★★★★★</div>
+                    <blockquote>"The care I received was exceptional..."</blockquote>
+                    <div class="patient-info">
+                        <div class="testimg">
+                        <img src="./assets/img/testimonial/ebonymaw.jpeg" alt="Patient photo">
+                        </div>
+                        <div>
+                        <strong>Ebony Maw.</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="item shadow webmed-testimonial">
+                    <div class="rating">★★★★★</div>
+                    <blockquote>"This platform helped me identify my condition early and potentially saved my life."</blockquote>
+                    <div class="patient-info">
+                        <div class="testimg">
+                        <img src="./assets/img/testimonial/holly.jpeg" alt="Patient photo">
+                        </div>
+                        <div>
+                        <strong>Holly Snow.</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="item shadow webmed-testimonial">
+                    <div class="rating">★★★★★</div>
+                    <blockquote>"Webmed and thier team have been my family's primary care provider for over 5 years. They remember personal details about 
+                        our lives and make us feel like more than just patients. When my son developed asthma, they created a comprehensive management plan that has kept him out of the emergency 
+                        room for two years straight."</blockquote>
+                    <div class="patient-info">
+                        <div class="testimg">
+                        <img src="./assets/img/testimonial/johnson.jpeg" alt="Patient photo">
+                        </div>
+                        <div>
+                        <strong>The Johnson Family.</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="item shadow webmed-testimonial">
+                    <div class="rating">★★★★★</div>
+                    <blockquote>"As someone who used to avoid doctors, I can't believe I'm saying this, but I actually look forward to my appointments. The online scheduling makes it so easy, and the staff always 
+                        makes me feel comfortable. They explain everything in plain English and never rush me through my questions."</blockquote>
+                    <div class="patient-info">
+                        <div class="testimg">
+                        <img src="./assets/img/testimonial/noah.jpeg" alt="Patient photo">
+                        </div>
+                        <div>
+                        <strong>Michael T.</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="owl-carousel testimonial-patient px-5 owl-theme z-3">
+                <div class="item shadow webmed-testimonial">
+                    <div class="rating">★★★★★</div>
+                    <blockquote>"Living in a rural area, I used to drive 2 hours for specialist appointments. Now, with their telemedicine service, I get the same quality care from my living room. The video quality 
+                        is crystal clear, and the doctors are just as thorough as in-person visits."</blockquote>
+                    <div class="patient-info">
+                        <div class="testimg">
+                        <img src="./assets/img/testimonial/micheal.jpeg" alt="Patient photo">
+                        </div>
+                        <div>
+                        <strong>Noah K.</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="item shadow webmed-testimonial">
+                    <div class="rating">★★★★★</div>
+                    <blockquote>"I was skeptical about virtual visits until I had a sudden skin rash on a Sunday evening. Within 20 minutes, I was video-chatting with a dermatologist who diagnosed my condition and sent 
+                        a prescription to my local pharmacy. The convenience is life-changing."</blockquote>
+                    <div class="patient-info">
+                        <div class="testimg">
+                        <img src="./assets/img/testimonial/david.jpeg" alt="Patient photo">
+                        </div>
+                        <div>
+                        <strong>David R.</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="item shadow webmed-testimonial">
+                    <div class="rating">★★★★★</div>
+                    <blockquote>"After being diagnosed with Type 2 diabetes, I felt overwhelmed and scared. The diabetes education program here gave me the tools and confidence to manage my condition. My A1C has dropped 
+                        from 9.2 to 6.1 in just 6 months, and I've reduced my medication by half."</blockquote>
+                    <div class="patient-info">
+                        <div class="testimg">
+                        <img src="./assets/img/testimonial/download.jpeg" alt="Patient photo">
+                        </div>
+                        <div>
+                        <strong>Francis Gracias.</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="item shadow webmed-testimonial">
+                    <div class="rating">★★★★★</div>
+                    <blockquote>"When my daughter cut her hand deeply on a weekend, I panicked. The urgent care team saw us immediately, stitched her up perfectly, and even called the next day to check on her. 
+                        We avoided the ER wait and saved thousands of dollars."</blockquote>
+                    <div class="patient-info">
+                        <div class="testimg">
+                        <img src="./assets/img/testimonial/amanda.jpeg" alt="Patient photo">
+                        </div>
+                        <div>
+                        <strong>Amanda Desanta.</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="item shadow webmed-testimonial">
+                    <div class="rating">★★★★★</div>
+                    <blockquote>"I've seen multiple cardiologists over the years, but none took the time to explain things like Dr. Chen does. He drew diagrams, answered all my family's questions, and created a 
+                        treatment plan that actually fits my lifestyle. My heart health has never been better."</blockquote>
+                    <div class="patient-info">
+                        <div class="testimg">
+                        <img src="./assets/img/testimonial/robert.jpeg" alt="Patient photo">
+                        </div>
+                        <div>
+                        <strong>Robert Downey Jnr.</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="item shadow webmed-testimonial">
+                    <div class="rating">★★★★★</div>
+                    <blockquote>"I woke up with severe chest pain at 3 AM. Instead of going to the ER, I used the 24/7 telemedicine service. The doctor assessed me within minutes, determined it wasn't cardiac, 
+                        and saved me from a stressful and expensive ER visit.</blockquote>
+                    <div class="patient-info">
+                        <div class="testimg">
+                        <img src="./assets/img/testimonial/trevor.jpeg" alt="Patient photo">
+                        </div>
+                        <div>
+                        <strong>Trevor Townley.</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Section:Block -->  
+        <div class="container py-3 my-5 mt-5 text-center invisible">
+            block   
+        </div>
+
+
+        <!-- 
+        contact-->
+        <section class="h4l-contact"> 
+
+            <div class="p-5">
+                <h1 data-aos="fade-left" data-aos-delay="300" class="text-center display-4 fw-bold">Get in Touch</h1>
+                <p data-aos="fade-left" data-aos-delay="400" class="text-center">Have questions or need assistance? Reach out to our support team.</p>
+                <div class="row">
+                    <div class="col-md-5 d-flex justify-content-center align-items-center">
+                        <div class="text-capitalize" style="max-width: 600px;">
+                            <h1 class="display-2 fw-bolder">expert care for your health and wellness<span class="text-danger">.</span></h1>
+                            <p>Our medical experts provide compassionate, professional support to keep your loved ones safe and well.</p>
+                            <button class="btn btn-md btn-danger">Book An Appointment <i class="fa fa-calendar-check"></i></button>
+
+                            <div class="mt-5">
+                                <div class="h4l-contact-item float-start d-flex justify-content-center align-items-center gap-3 mt-4">
+                                    <div class="item p-2 rounded-4 shadow"><i class="fa fa-syringe"></i> vaccinations</div>
+                                    <div class="item p-2 rounded-4 shadow"><i class="fa fa-dna"></i> High Quality</div>
+                                    <div class="item p-2 rounded-4 shadow"><i class="fa fa-microscope"></i> laboratory tests</div>
+                                </div>
+                                <div class="h4l-contact-item float-end d-flex justify-content-center align-items-center gap-3 mt-4">
+                                    <div class="item p-2 rounded-4 shadow"><i class="fa fa-stethoscope"></i> General Check-ups</div>
+                                    <div class="item p-2 rounded-4 shadow"><i class="fa fa-ambulance"></i> Emergency Care</div>
+                                    <div class="item p-2 rounded-4 shadow"><i class="fa fa-flask"></i> Diagnostics</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-7">
+                        <div class="h4l-contact-img rounded-2">
+                            <div class="h4l-contact-social">
+                                <a href="https://instagram.com"><i class="bi bi-instagram social"></i></a>
+                                <a href="https://facebook.com"><i class="bi bi-facebook social"></i></a>
+                                <a href="https://twitter.com"><i class="bi bi-twitter social"></i></a>
+                            </div>
+                            <h6 class="h4l-contact-float"><a href="" style="text-decoration: none;">Expertise  <i class="bi bi-plus-circle-fill text-danger"></i></a></h6>
+                            <h6 class="h4l-contact-float1"><a href="" style="text-decoration: none;">Wellness  <i class="bi bi-plus-circle-fill text-danger"></i></a></h6>
+                            <h6 class="h4l-contact-float2"><a href="" style="text-decoration: none;">Care  <i class="bi bi-plus-circle-fill text-danger"></i></a></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Section:Block -->  
+        <div id="contact" class="container py-3 my-5 mt-5 text-center invisible">
+            block   
+        </div>
+
+        <!--
+        contact-->
+        <section>
+
+            <div class="container h4l-contact-form p-5 rounded-4">
+                <div class="text-center mb-4">
+                    <h1 data-aos="fade-left" data-aos-delay="300" class="display-4 fw-bolder">Contact Us</h1>
+                    <p data-aos="fade-left" data-aos-delay="400">We would love to hear from you! Please fill out the form below to get in touch with our team.</p>
+                </div>
+                <form>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control focus-ring" style="--bs-focus-ring-color: rgba(var(--bs-danger-rgb), .25)" placeholder="Full Name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" class="form-control focus-ring" style="--bs-focus-ring-color: rgba(var(--bs-danger-rgb), .25)" placeholder="Email Address" required>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" class="form-control focus-ring" style="--bs-focus-ring-color: rgba(var(--bs-danger-rgb), .25)" placeholder="Subject" required>
+                        </div>
+                        <div class="col-12">
+                            <textarea class="form-control focus-ring" style="--bs-focus-ring-color: rgba(var(--bs-danger-rgb), .25)" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-danger btn-lg">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Section:Block -->  
+        <div class="container py-3 my-3 mt-5 text-center invisible">
+            block
+        </div>
+
+
+        <div class="section mg-sqiglly">
+
+        <!-- Section:Block -->  
+        <div id="contact" class="container py-3 my-5 mt-5 text-center invisible">
+            block   
+        </div>
+
+        <!--
+        newsletter-->
+        <section>
+            <div class="text-center">
+                <div class="" style="max-width: 800px;">
+                <h1 class="display-3 text-light fw-bolder text-capitalize">Lets collaborate to bring your construction vision to life</h1>
+                <p class="text-light">join our newsletter for the latest updates</p>
+                </div>
+                <div class=" h4l-newsletter2 my-3 mt-3">
+                    <form class="d-flex justify-content-center align-items-center gap-2">
+                        <input type="email" class="form-control-0 bg-white focus-ring text-center" style="--bs-focus-ring-color: rgba(var(--bs-light-rgb), .25)" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-danger">Join Now</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- call to action -->
+        <div class="section webmed-takeoff section-2 mt-5">
+            <div class="container-xxl p-5 py-5 mt-5 rounded-4 px-5">
+                <div class="row align-items-center justify-content-between py-5">
+                    <div data-aos="fade-right" data-aos-delay="300" class="col-lg-6 mb-2 mb-lg-0">
+                        <div class="text-start">
+                        <i class="bi bi-arrow-right fs-1 fw-bolder"></i>
+                        <h1 data-aos="fade-right" data-aos-delay="500">Take Control Now</h1>
+                        <p data-aos="fade-right" data-aos-delay="600">Start your health journey with our comprehensive symptom analysis platform</p>
+                        <div class="webmed-takeoff-btn">
+                            <a data-aos="fade-right" data-aos-delay="700" class="btn" href="">Begin</a>
+                            <a data-aos="fade-right" data-aos-delay="900" class="btn" href="">Contact</a>
+                        </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="500" class="col-lg-6 webmed-hero-info">
+                        <div class="text-end">
+                            <i class="bi bi-life-preserver fs-1 fw-bolder"></i>
+                            <h1 data-aos="fade-left" data-aos-delay="700">Need Professional Guidance</h1>
+                            <p data-aos="fade-left" data-aos-delay="800">Connect with our medical experts for personalized health consultations</p>
+
+                            <div class="float-end webmed-takeoff-btn">
+                                <a data-aos="fade-left" data-aos-delay="900" class="btn" href="">Consult</a>
+                                <a data-aos="fade-left" data-aos-delay="1100" class="btn" href="">Support</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>		
+        </div>
+
+
+        <!-- Section: Footer -->
+        <div class="section footer">
+            <div class="container-fluid text-center p-5 py-3">
+                <div class="footimg" data-aos="fade-down" data-aos-delay="300">
+                    <img src="./assets/img/logo/2-removebg-preview.png" alt="">
+                </div>
+                <p data-aos="fade-left" data-aos-delay="500">Your Health, Our Priority</p>
+                <div class="hstack footer-infoe gap-1 justify-content-center">
+                    <a data-aos="fade-left" data-aos-delay="500" href="" class="btn">About Us</a>
+                    <a data-aos="fade-left" data-aos-delay="600" href="" class="btn">Services</a>
+                    <a data-aos="fade-left" data-aos-delay="700" href="" class="btn">Contact</a>
+                    <a data-aos="fade-left" data-aos-delay="800" href="" class="btn">Support</a>
+                    <a data-aos="fade-left" data-aos-delay="900" href="" class="btn">Resources</a>
+                </div>
+                <hr>
+                <div class="footer-info gap-3">
+                    <p data-aos="fade-left" data-aos-delay="500">© 2025 WEBMED. All rights reserved.</p>
+                    <div data-aos="fade-left" data-aos-delay="600" class="me-auto">
+                        <a href="">Privacy Policy</a>
+                        <a href="">terms of service</a>
+                        <a href="">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="curve">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+        </div>
+
+        </div>
+        
+
+    </main>
+
+    <main class="mobile">
+
+        <section class="mobile-hero">
+            <div class="m-2">
+                <div class="container bg-dark invisible">
+                    <div class="text-center py-3">
+                        <h1 class="display-4 fw-bolder text-light">H4L Mobile Version</h1>
+                        <p class="text-light">Experience healthcare at your fingertips.</p>
+                    </div>
+                </div>
+                <div class="container mobile-bod py-5 rounded-4">
+                    <h1 class="display-4 fw-bolder text-light text-center">Mobile Version Coming Soon!</h1>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!--
+    scrpt-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="./assets/vendors/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            stagepadding: 50,
+            loop:true,
+            margin:10,
+            autoplay:true,
+            autoplayTimeout:2000,
+            autoplayHoverPause:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+                }
+            }
+        })
+    </script>
+    <script>
+        window.addEventListener("scroll", function(){
+            const header = document.querySelector(".navbar");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+    </script>
+    <script>
+      setTimeout(function(){
+          $('.webmed_bg').fadeToggle('slow');
+      }, 2500);
+    </script>
+
+</body>
+</html>
